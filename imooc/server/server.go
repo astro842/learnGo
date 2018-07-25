@@ -1,13 +1,13 @@
 package main
 
 import (
-	"net/http"
 	"fmt"
+	"net/http"
 )
 
 func main() {
 	http.HandleFunc("/", func(writer http.ResponseWriter, request *http.Request) {
-		fmt.Fprintf(writer,"<h1>hello world %s!</h1>",request.FormValue("name"))
+		fmt.Fprintf(writer, "<h1>hello world %s!</h1>", request.FormValue("name"))
 	})
-	http.ListenAndServe(":8888",nil)
+	http.ListenAndServe(":8888", nil)
 }

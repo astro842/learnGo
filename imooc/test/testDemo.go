@@ -2,12 +2,11 @@ package main
 
 import "fmt"
 
-func mul(arr *[4]int)  {
-	arr[0]=100
-}
-
 func main() {
-	a := [4]int{1,2,3,4}
-	mul(&a)
-	fmt.Print(a[0])
+	s := "hello"
+	c := []byte(s)
+    c[0] = 'a'
+    s2 := string(c)
+	fmt.Println(s2)
+	fmt.Println(s)
 }
